@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --clr-pink: #f96da2;
+  --clr-violet: #6c77b4;
+  --clr-white: #ffff;
+  --font-family: "Poppins", sans-serif;
+  --font-large: 3em;
+  --line-height: 1;
+}
+
+/*GLOBAL CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #ffeef0;
+}
+h1 {
+  font-family: var(--font-family);
+  font-size: 91px;
+  line-height: var(--line-height);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.button {
+  border-radius: 1rem;
+  background-color: var(--clr-pink);
+  padding: 4px 10px;
+}
+.button:hover {
+  background-color: var(--clr-violet);
+  transition: ease-in-out 0.5s;
+}
+.pink {
+  color: var(--clr-pink);
+}
+.violet {
+  color: var(--clr-violet);
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  color: var(--clr-white);
+  font-family: 'Poppins', sans-serif;
+}
+a:hover {
+  color: var(--clr-white);
+}
+.text {
+  max-width: 413px;
+}
+/*GLOBAL CSS END*/
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(108, 119, 180);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--clr-pink);
+}
+.hero {
+  padding: 7em 9em;
+}
+.hero-contents > button {
+  margin-top: 1rem;
+}
+.second {
+  padding: 5em 2rem 7em 2rem;
+  background-color: #6c77b4;
+  color: var(--clr-white);
+}
+.second img {
+  position: absolute;
+  right: 718px;
+  top: 595px;
+  z-index: 100;
+}
+.second h1 {
+  margin-bottom: 1rem;
+}
+footer {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(1px);
+  position: relative;
+}
+footer h1 {
+  font-size: 2em;
+}
+footer a {
+  color: rgb(0, 0, 0);
+}
+footer a:hover {
+  background-color: var(--clr-pink);
+  color: var(--clr-white);
+  border-radius: 1rem;
+  padding: 7px;
+}
+
+/*MOBILE DEVICES 768PX*/
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 5em 1rem 5em 1rem;
+  }
+  .hero h1 {
+    font-size: 2.5em;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .second {
+    padding: 3em 1rem;
+    background-color: #6c77b4;
+    color: var(--clr-white);
+  }
+  .second img {
+    display: none;
+  }
+  .second h1 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+  footer {
+    padding: 2em 1rem 2em 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+  }
+  footer h1 {
+    font-size: 2em;
+  }
+  .footer-first {
+    margin-bottom: 1rem;
+  }
+}
+/*MOBILE DEVICES END*/

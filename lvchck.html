@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="lvchck.css" />
+    <title>Love Check</title>
+  </head>
+
+  <body>
+    <!--NavBar Start-->
+    <header class="navigation">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="violet">Love <span class="pink">Check</span></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link me-3" aria-current="page" href="index.html"
+                >Home</a
+              >
+              <a class="nav-link me-3" href="index.html">About Us</a>
+              <span class="nav-link me-3 button btn text-white"
+                ><a href="lvchck.html">Relationship Check-In</a></span
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- NavBar End -->
+
+    <!-- Hero Section -->
+    <section class="hero-2">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-lg-6">
+            <center>
+              <img src="img/hero-2.png" class="img-fluid" alt="" />
+            </center>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card-container">
+              <div
+                class="card-image img-fluid"
+                id="card-image"
+                style="background-image: url('https://i.pinimg.com/474x/f6/28/e7/f628e75ef0726445ebd735f59df5cc12.jpg')"
+              ></div>
+              <div class="card-content">
+                <div class="card-question" id="card-question">
+                  How can we improve our communication?
+                </div>
+                <button class="card-button" id="card-button">
+                  Get another question
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero End -->
+
+    <script>
+      const images = [
+        "https://i.pinimg.com/474x/f6/00/fc/f600fc74a9701fdeeee5c9a763b8e492.jpg",
+        "https://i.pinimg.com/474x/45/2b/36/452b36703331e8cfb7d4ebe1d59a38df.jpg",
+        "https://i.pinimg.com/474x/d5/d7/32/d5d732fcdcdb692ab01a5894a0e94796.jpg",
+        "https://i.pinimg.com/474x/0e/df/12/0edf1249d87dbdec3d70fa78c6108cad.jpg",
+        "https://i.pinimg.com/474x/bf/95/2a/bf952af3c379900a1c997adbef749975.jpg",
+        "https://i.pinimg.com/474x/7a/66/64/7a66642be4e2a61d48e2f73975c4ddd5.jpg",
+        "https://i.pinimg.com/474x/b8/a0/23/b8a023170f0b1bde9c732acb0c537636.jpg",
+        "https://i.pinimg.com/474x/98/c7/85/98c7851cef994f777fc7d7202926f7e2.jpg",
+        "https://i.pinimg.com/474x/e2/13/39/e213393237187bcdf5c044ea711a1a79.jpg",
+        "https://i.pinimg.com/474x/37/29/c1/3729c13267b6332af29b1d1cbecb8c9f.jpg",
+      ];
+      const questions = [
+        "What is the funniest thing that has happened to us as a couple?",
+        "What is the funniest joke you've ever heard?",
+        "If you could be any fictional character for a day, who would you choose and why?",
+        "What is the craziest dream you've ever had?",
+        "What is your favorite funny movie or TV show?",
+        "What is the silliest thing that has made you laugh recently?",
+        "If you could switch lives with anyone for a day, who would you choose and why?",
+        "What is the most embarrassing thing that has ever happened to you?",
+        "What is the most ridiculous thing you've ever done to impress someone?",
+        "What's the weirdest thing you've ever eaten?",
+        "What is my favorite food?",
+        "What is my favorite color?",
+        "What is my favorite color?",
+        "What is my favorite color?",
+        "What is my favorite color?",
+        "What is my favorite color?",
+        "What is my biggest fear?",
+        "What is my dream vacation destination?",
+        "What is my favorite way to relax?",
+        "What is my favorite childhood memory?",
+        "What are some of your favorite things that we do together?",
+        "How do you feel we’ve grown as a couple in the past month?",
+        "What are some things you’d like to work on in our relationship?",
+        "What’s something you’ve learned about me recently that you didn’t know before?",
+        "What is the best thing about being in a relationship with me?",
+        "What is the hardest thing about being in a relationship with me?",
+        "What is your love language and how do you feel it is expressed in our relationship?",
+        "What are some ways we can better support each other?",
+        "What is something you’ve always wanted to do together as a couple?",
+        "What is something you appreciate about our relationship that you may not have in past relationships?",
+        "What is something you admire about me?",
+        "What’s a trait you think we share?",
+        "What’s a personality quirk you find endearing?",
+        "What’s a personality quirk you find endearing?",
+        "What’s a personality quirk you find endearing?",
+        "What’s a difficult conversation we need to have?",
+        "What’s a difficult conversation we need to have?",
+        "What’s something you’ve learned from me?",
+        "What’s something we can do to be more intentional?",
+        "What’s a quality in a person that you admire most?",
+        "What’s something you’re excited for in the future?",
+        "What’s a way we can communicate better?",
+        "What’s a way we can have more fun?",
+      ];
+
+      const cardImage = document.getElementById("card-image");
+      const cardQuestion = document.getElementById("card-question");
+      const cardButton = document.getElementById("card-button");
+
+      let usedIndices = [];
+
+      function getRandomIndex() {
+        let randomIndex = Math.floor(Math.random() * images.length);
+        while (usedIndices.includes(randomIndex)) {
+          randomIndex = Math.floor(Math.random() * images.length);
+        }
+        usedIndices.push(randomIndex);
+        if (usedIndices.length > images.length / 2) {
+          usedIndices = [];
+        }
+        return randomIndex;
+      }
+
+      function changeCard() {
+        const randomIndex = getRandomIndex();
+        cardImage.style.backgroundImage = `url(${images[randomIndex]})`;
+        cardQuestion.innerText = questions[randomIndex];
+      }
+
+      cardButton.addEventListener("click", changeCard);
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
